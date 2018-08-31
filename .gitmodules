@@ -1,0 +1,3 @@
+[submodule "openthread"]
+	path = software/openthread
+	url = https://github.com/lab11/openthread

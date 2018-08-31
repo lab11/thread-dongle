@@ -1,0 +1,8 @@
+#!/bin/sh
+
+HEX="openthread/build/kw41z/examples/apps/ncp/ot-ncp-ftd.hex"
+
+printf "r\n" > flash.jlink
+printf "loadfile $HEX \nr\ng\nexit\n" >> flash.jlink
+JLinkExe -device MKW41Z512xxx4 -if swd -speed 4000 flash.jlink
+rm flash.jlink
